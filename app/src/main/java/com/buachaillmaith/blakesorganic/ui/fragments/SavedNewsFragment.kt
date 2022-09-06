@@ -38,6 +38,7 @@ class SavedNewsFragment : Fragment(R.layout.fragment_saved_news) {
 
         var savedList = mutableListOf(
             Article(null,
+                R.drawable._50ml_kefir_550x825,
                 "Barrett Sallee",
                 "Despite a roaring comeback taking advantage of multiple Florida State miscues, it was LSU that made the final mistake on Sunday night in a 24-23 victory by the Seminoles at the Mercedes-Benz Superdom…",
                 "LSU appeared set for an epic comeback only for special teams to cost it with no time remaining",

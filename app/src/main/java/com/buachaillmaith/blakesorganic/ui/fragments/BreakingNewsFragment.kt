@@ -71,6 +71,7 @@ class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
 
         var newsList = mutableListOf(   //rename throughout to newsList
             Article(null,
+                R.drawable._50ml_kefir_550x825,
                 "Barrett Sallee",
                 "Despite a roaring comeback taking advantage of multiple Florida State miscues, it was LSU that made the final mistake on Sunday night in a 24-23 victory by the Seminoles at the Mercedes-Benz Superdom…",
                 "LSU appeared set for an epic comeback only for special teams to cost it with no time remaining",
@@ -81,6 +82,7 @@ class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
                 "https://sportshub.cbsistatic.com/i/r/2022/09/05/393fca4a-e4f1-4e35-be65-7175459eb852/thumbnail/1200x675/93391b41c76e0d387cd1f7abd230c427/noles.jpg"
             ),
             Article(null,
+                R.drawable.__coffee_packs_side_by_side,
                 "Elizabeth Howell",
                 "SpaceX sent a space tug aloft along with another big batch of its Starlink internet satellites on Sunday night (Sept. 4) — and landed a rocket on a ship at sea as well.  A SpaceX  Falcon 9 rocket li… ",
                 "It was SpaceX's 40th launch of 2022.",
@@ -91,6 +93,7 @@ class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
                 "https://cdn.mos.cms.futurecdn.net/9sn8ayp4QWpzHpW6zyU8qR-1200-80.jpeg"
             ),
             Article(null,
+                R.drawable.back_of_coffee_high_res_blakes_organic,
                 "Amir Vera, Amanda Musa",
                 "Rescuers are searching for nine people who are unaccounted for after a float plane crashed in Washingtons Mutiny Bay Sunday afternoon, officials said. Ten people, including a child, were on board t",
                 "Rescuers are searching for nine people who are unaccounted for after a float plane crashed in Washington's Mutiny Bay Sunday afternoon, officials said.",
@@ -101,6 +104,7 @@ class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
                 "https://media.cnn.com/api/v1/images/stellar/prod/220905003331-01-mutiny-bay-washington-plane-crash.jpg?q=w_800,c_fill"
             ),
             Article(null,
+                R.drawable.blakes_culture_blend_organic_whole_bean_coffee_catering_pack_1kg,
                 "Tyler Coates",
                 "Lee Yoo-mi has won the 2022 Emmy for outstanding guest actress in a drama series for her role in Netflix’s Squid Game, becoming the first Korean actress to take home the prize in this category. Colman… ",
                 "Lee Yoo-mi has won the 2022 Emmy for outstanding guest actress in a drama series for her role in Netflix’s Squid Game, becoming the first Korean actress to take home the prize in this category. Colman Domingo has won outstanding guest actor in a drama series …",

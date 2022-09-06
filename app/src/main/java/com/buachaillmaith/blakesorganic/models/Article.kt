@@ -4,6 +4,7 @@ package com.buachaillmaith.blakesorganic.models
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.io.Serializable
+import com.buachaillmaith.blakesorganic.R
 
 @Entity(
     tableName = "articles"
@@ -11,6 +12,7 @@ import java.io.Serializable
 data class Article(
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null,
+    val imageDraw : Int,
     val author: String,
     val content: String,
     val description: String,

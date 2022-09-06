@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import android.widget.ImageView
 import com.buachaillmaith.blakesorganic.R
 import com.buachaillmaith.blakesorganic.models.Article
 import com.bumptech.glide.Glide
@@ -49,7 +50,9 @@ class NewsAdapter(var todos:List<Article>) : RecyclerView.Adapter<NewsAdapter.Ar
         val article = todos[position]
         holder.itemView.apply {
 //            Glide.with(this).load(article.urlToImage).into(ivArticleImage)
-            Glide.with(this).load(article.urlToImage).into(ivArticleImage)
+//            ivArticleImage.setImageResource(R.drawable.ic_favorite)
+//            ivArticleImage.setImageResource(R.drawable._50ml_kefir_550x825)
+            ivArticleImage.setImageResource(article.imageDraw)
             tvSource.text = article.source.name
             tvTitle.text = article.title
             tvDescription.text = article.description
