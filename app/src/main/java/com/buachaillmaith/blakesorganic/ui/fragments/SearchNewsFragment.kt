@@ -10,6 +10,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.buachaillmaith.blakesorganic.R
 import com.buachaillmaith.blakesorganic.adapters.NewsAdapter
+import com.buachaillmaith.blakesorganic.models.Article
+import com.buachaillmaith.blakesorganic.models.Source
 import com.buachaillmaith.blakesorganic.ui.NewsActivity
 import com.buachaillmaith.blakesorganic.ui.NewsViewModel
 import com.buachaillmaith.blakesorganic.util.Constants.Companion.SEARCH_NEWS_TIME_DELAY
@@ -54,25 +56,25 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
             }
         }
 
-        viewModel.searchNews.observe(viewLifecycleOwner, Observer { response ->
-            when(response) {
-                is Resource.Success -> {
-                    hideProgressBar()
-                    response.data?.let { newsResponse ->
-                        newsAdapter.differ.submitList(newsResponse.articles)
-                    }
-                }
-                is Resource.Error -> {
-                    hideProgressBar()
-                    response.message?.let { message ->
-                        Log.e(TAG, "An error occured: $message")
-                    }
-                }
-                is Resource.Loading -> {
-                    showProgressBar()
-                }
-            }
-        })
+//        viewModel.searchNews.observe(viewLifecycleOwner, Observer { response ->
+//            when(response) {
+//                is Resource.Success -> {
+//                    hideProgressBar()
+//                    response.data?.let { newsResponse ->
+//                        newsAdapter.differ.submitList(newsResponse.articles)
+//                    }
+//                }
+//                is Resource.Error -> {
+//                    hideProgressBar()
+//                    response.message?.let { message ->
+//                        Log.e(TAG, "An error occured: $message")
+//                    }
+//                }
+//                is Resource.Loading -> {
+//                    showProgressBar()
+//                }
+//            }
+//        })
     }
 
     private fun hideProgressBar() {
@@ -84,7 +86,10 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
     }
 
     private fun setupRecyclerView() {
-        newsAdapter = NewsAdapter()
+
+        val list : List<Article> = listOf()
+
+        newsAdapter = NewsAdapter(list)
         rvSearchNews.apply {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)

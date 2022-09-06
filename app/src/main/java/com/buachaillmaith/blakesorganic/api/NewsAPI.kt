@@ -18,6 +18,11 @@ interface NewsAPI {
         apiKey: String = API_KEY
     ): Response<NewsResponse>
 
+    @GET("v2/static-headlines")
+    suspend fun getStaticNews(
+    ): Response<NewsResponse>
+
+
     @GET("v2/everything")
     suspend fun searchForNews(
         @Query("q")

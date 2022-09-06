@@ -26,6 +26,7 @@ class NewsViewModel(
     fun getBreakingNews(countryCode: String) = viewModelScope.launch {
         breakingNews.postValue(Resource.Loading())
         val response = newsRepository.getBreakingNews(countryCode, breakingNewsPage)
+        println("getBreakingNews:response:${response.body()}");
         breakingNews.postValue(handleBreakingNewsResponse(response))
     }
 
@@ -36,7 +37,10 @@ class NewsViewModel(
     }
 
     private fun handleBreakingNewsResponse(response: Response<NewsResponse>) : Resource<NewsResponse> {
+//        println("handleBreakingNewsResponse:response:${response.body()}");
         if(response.isSuccessful) {
+            println("handleBreakingNewsResponse:isSuccessful:response.body():${response.body()}");
+            println("handleBreakingNewsResponse:isSuccessful:response:${response}");
             response.body()?.let { resultResponse ->
                 return Resource.Success(resultResponse)
             }
