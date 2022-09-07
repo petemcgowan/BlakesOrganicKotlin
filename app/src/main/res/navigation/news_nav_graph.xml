@@ -3,55 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/news_nav_graph"
-    app:startDestination="@id/breakingNewsFragment">
+    app:startDestination="@id/historyFragment">
 
     <fragment
         android:id="@+id/contactUsFragment"
-        android:name="com.buachaillmaith.blakesorganic.ui.fragments.SearchNewsFragment"
-        android:label="SearchNewsFragment">
+        android:name="com.buachaillmaith.blakesorganic.ui.fragments.ContactUsFragment"
+        android:label="ContactUsFragment">
         <action
-            android:id="@+id/action_searchNewsFragment_to_articleFragment"
-            app:destination="@id/articleFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
+            android:id="@+id/action_contactUsFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
     </fragment>
     <fragment
-        android:id="@+id/breakingNewsFragment"
-        android:name="com.buachaillmaith.blakesorganic.ui.fragments.BreakingNewsFragment"
-        android:label="BreakingNewsFragment" >
+        android:id="@+id/historyFragment"
+        android:name="com.buachaillmaith.blakesorganic.ui.fragments.HistoryFragment"
+        android:label="HistoryFragment">
         <action
-            android:id="@+id/action_breakingNewsFragment_to_articleFragment"
-            app:destination="@id/articleFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            android:id="@+id/action_historyFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
     </fragment>
     <fragment
-        android:id="@+id/savedNewsFragment"
-        android:name="com.buachaillmaith.blakesorganic.ui.fragments.SavedNewsFragment"
-        android:label="SavedNewsFragment">
+        android:id="@+id/productsFragment"
+        android:name="com.buachaillmaith.blakesorganic.ui.fragments.ProductsFragment"
+        android:label="ProductsFragment">
         <action
-            android:id="@+id/action_savedNewsFragment_to_articleFragment"
-            app:destination="@id/articleFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
+            android:id="@+id/action_productsFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
     </fragment>
     <fragment
-        android:id="@+id/searchNewsFragment"
-        android:name="com.buachaillmaith.blakesorganic.ui.fragments.SearchNewsFragment"
-        android:label="SearchNewsFragment">
+        android:id="@+id/faqFragment"
+        android:name="com.buachaillmaith.blakesorganic.ui.fragments.FaqFragment"
+        android:label="FaqFragment">
         <action
-            android:id="@+id/action_searchNewsFragment_to_articleFragment"
-            app:destination="@id/articleFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
+            android:id="@+id/action_faqFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
     </fragment>
     <fragment
         android:id="@+id/articleFragment"

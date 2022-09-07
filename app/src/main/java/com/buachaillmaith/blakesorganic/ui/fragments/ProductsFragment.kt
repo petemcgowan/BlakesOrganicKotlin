@@ -11,9 +11,9 @@ import com.buachaillmaith.blakesorganic.models.Article
 import com.buachaillmaith.blakesorganic.models.Source
 import com.buachaillmaith.blakesorganic.ui.NewsActivity
 import com.buachaillmaith.blakesorganic.ui.NewsViewModel
-import kotlinx.android.synthetic.main.fragment_saved_news.*
+import kotlinx.android.synthetic.main.fragment_products.*
 
-class SavedNewsFragment : Fragment(R.layout.fragment_saved_news) {
+class ProductsFragment : Fragment(R.layout.fragment_products) {
 
     lateinit var viewModel: NewsViewModel
     lateinit var newsAdapter: NewsAdapter
@@ -28,7 +28,7 @@ class SavedNewsFragment : Fragment(R.layout.fragment_saved_news) {
                 putSerializable("article", it)
             }
             findNavController().navigate(
-                R.id.action_savedNewsFragment_to_articleFragment,
+                R.id.action_productsFragment_to_articleFragment,
                 bundle
             )
         }
@@ -51,7 +51,7 @@ class SavedNewsFragment : Fragment(R.layout.fragment_saved_news) {
         )
 
         newsAdapter = NewsAdapter(savedList)
-        rvSavedNews.apply {
+        rvProducts.apply {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)
         }

@@ -1,32 +1,28 @@
 package com.buachaillmaith.blakesorganic.ui.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.buachaillmaith.blakesorganic.R
 import com.buachaillmaith.blakesorganic.adapters.NewsAdapter
 import com.buachaillmaith.blakesorganic.models.Article
-import com.buachaillmaith.blakesorganic.models.Source
 import com.buachaillmaith.blakesorganic.ui.NewsActivity
 import com.buachaillmaith.blakesorganic.ui.NewsViewModel
 import com.buachaillmaith.blakesorganic.util.Constants.Companion.SEARCH_NEWS_TIME_DELAY
-import com.buachaillmaith.blakesorganic.util.Resource
-import kotlinx.android.synthetic.main.fragment_search_news.*
+import kotlinx.android.synthetic.main.fragment_faq.*
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
+class FaqFragment : Fragment(R.layout.fragment_faq) {
 
     lateinit var viewModel: NewsViewModel
     lateinit var newsAdapter: NewsAdapter
-    val TAG = "SearchNewsFragment"
+    val TAG = "FaqFragment"
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -38,7 +34,7 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
                 putSerializable("article", it)
             }
             findNavController().navigate(
-                R.id.action_searchNewsFragment_to_articleFragment,
+                R.id.action_faqFragment_to_articleFragment,
                 bundle
             )
         }
@@ -90,7 +86,7 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
         val list : List<Article> = listOf()
 
         newsAdapter = NewsAdapter(list)
-        rvSearchNews.apply {
+        rvFaq.apply {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)
         }

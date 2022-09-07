@@ -56,7 +56,7 @@ class NewsAdapter(var todos:List<Article>) : RecyclerView.Adapter<NewsAdapter.Ar
             tvSource.text = article.source.name
             tvTitle.text = article.title
             tvDescription.text = article.description
-            tvPublishedAt.text = article.publishedAt
+//            tvPublishedAt.text = article.publishedAt
 
             setOnClickListener {
                 onItemClickListener?.let { it(article) }
