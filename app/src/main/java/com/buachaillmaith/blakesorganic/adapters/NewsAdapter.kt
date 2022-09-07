@@ -53,7 +53,7 @@ class NewsAdapter(var todos:List<Article>) : RecyclerView.Adapter<NewsAdapter.Ar
 //            ivArticleImage.setImageResource(R.drawable.ic_favorite)
 //            ivArticleImage.setImageResource(R.drawable._50ml_kefir_550x825)
             ivArticleImage.setImageResource(article.imageDraw)
-            tvSource.text = article.source.name
+//            tvSource.text = article.source.name
             tvTitle.text = article.title
             tvDescription.text = article.description
 //            tvPublishedAt.text = article.publishedAt
