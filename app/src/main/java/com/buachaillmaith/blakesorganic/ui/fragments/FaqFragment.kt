@@ -41,45 +41,17 @@ class FaqFragment : Fragment(R.layout.fragment_faq) {
         }
 
         var job: Job? = null
-        etSearch.addTextChangedListener { editable ->
-            job?.cancel()
-            job = MainScope().launch {
-                delay(SEARCH_NEWS_TIME_DELAY)
-                editable?.let {
-                    if(editable.toString().isNotEmpty()) {
-                        viewModel.searchNews(editable.toString())
-                    }
-                }
-            }
-        }
-
-//        viewModel.searchNews.observe(viewLifecycleOwner, Observer { response ->
-//            when(response) {
-//                is Resource.Success -> {
-//                    hideProgressBar()
-//                    response.data?.let { newsResponse ->
-//                        newsAdapter.differ.submitList(newsResponse.articles)
+//        etSearch.addTextChangedListener { editable ->
+//            job?.cancel()
+//            job = MainScope().launch {
+//                delay(SEARCH_NEWS_TIME_DELAY)
+//                editable?.let {
+//                    if(editable.toString().isNotEmpty()) {
+//                        viewModel.searchNews(editable.toString())
 //                    }
-//                }
-//                is Resource.Error -> {
-//                    hideProgressBar()
-//                    response.message?.let { message ->
-//                        Log.e(TAG, "An error occured: $message")
-//                    }
-//                }
-//                is Resource.Loading -> {
-//                    showProgressBar()
 //                }
 //            }
-//        })
-    }
-
-    private fun hideProgressBar() {
-        paginationProgressBar.visibility = View.INVISIBLE
-    }
-
-    private fun showProgressBar() {
-        paginationProgressBar.visibility = View.VISIBLE
+//        }
     }
 
     private fun setupRecyclerView() {

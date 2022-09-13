@@ -1,11 +1,68 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+<!--    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+<!--    </style>-->
+
+
+
+    <!-- Platform-independent theme providing an action bar in a dark-themed activity. -->
+    <style name="Theme.AppCompat" parent="Base.Theme.AppCompat" />
+
+    <!-- Platform-independent theme providing an action bar in a light-themed activity. -->
+    <style name="Theme.AppCompat.Light" parent="Base.Theme.AppCompat.Light" />
+
+    <!-- Platform-independent theme providing an action bar in a dark-themed activity. -->
+    <style name="Theme.AppCompat.Light.DarkActionBar" parent="Base.Theme.AppCompat.Light.DarkActionBar" />
+
+    <style name="Theme.AppCompat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AppCompat.DialogWhenLarge"
+        parent="Base.Theme.AppCompat.DialogWhenLarge">
+    </style>
+
+    <style name="Theme.AppCompat.Light.DialogWhenLarge"
+        parent="Base.Theme.AppCompat.Light.DialogWhenLarge">
+    </style>
+
+    <style name="Theme.AppCompat.Dialog" parent="Base.Theme.AppCompat.Dialog" />
+
+    <style name="Theme.AppCompat.Light.Dialog" parent="Base.Theme.AppCompat.Light.Dialog" />
+
+    <!-- Menu/item attributes -->
+    <style name="Theme.AppCompat.CompactMenu"
+        parent="Base.Theme.AppCompat.CompactMenu">
+    </style>
+
+    <style name="ThemeOverlay.AppCompat" parent="Base.ThemeOverlay.AppCompat" />
+
+    <!-- Theme overlay that replaces colors with their light versions but preserves
+         the value of colorAccent, colorPrimary and its variants. -->
+    <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light" />
+
+    <!-- Theme overlay that replaces colors with their dark versions but preserves
+         the value of colorAccent, colorPrimary and its variants. -->
+    <style name="ThemeOverlay.AppCompat.Dark" parent="Base.ThemeOverlay.AppCompat.Dark" />
+
+    <!-- Theme overlay that replaces the normal control color, which by default is the same as the
+         secondary text color, with the primary text color. -->
+    <style name="ThemeOverlay.AppCompat.ActionBar" parent="Base.ThemeOverlay.AppCompat.ActionBar" />
+
+    <!-- Theme overlay that replaces colors with their dark versions and replaces the normal
+         control color, which by default is the same as the secondary text color, with the primary
+         text color. -->
+    <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar" />
 
 </resources>
